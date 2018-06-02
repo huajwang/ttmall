@@ -27,7 +27,7 @@ public class HomeController {
 	
 	@GetMapping("/dashboard")
 	public String dashboard(Model model) {
-		String endpoint = "http://localhost:8181/address";
+		String endpoint = "http://localhost:7002/address";
 		Address addr = restTemplate.getForObject(endpoint, Address.class);
 		model.addAttribute("address", addr);
 		return "dashboard";

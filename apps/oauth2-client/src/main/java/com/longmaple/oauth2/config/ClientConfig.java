@@ -37,12 +37,12 @@ public class ClientConfig {
 
 	private OAuth2ProtectedResourceDetails resource() {
 		AuthorizationCodeResourceDetails resourceDetails = new AuthorizationCodeResourceDetails();
-		resourceDetails.setAccessTokenUri("http://localhost:8080/oauth/token");
-		resourceDetails.setUserAuthorizationUri("http://localhost:8080/oauth/authorize");
+		resourceDetails.setAccessTokenUri("http://localhost:7001/oauth/token");
+		resourceDetails.setUserAuthorizationUri("http://localhost:7001/oauth/authorize");
 		resourceDetails.setClientId("webapp");
 		resourceDetails.setClientSecret("abcd1234");
 		resourceDetails.setScope(Arrays.asList("user:profile:read", "user:profile:write"));
-		resourceDetails.setPreEstablishedRedirectUri("http://localhost:8282/callback");
+		resourceDetails.setPreEstablishedRedirectUri("http://localhost:7003/callback");
 		resourceDetails.setUseCurrentUri(false);
 		resourceDetails.setClientAuthenticationScheme(AuthenticationScheme.header);
 		return resourceDetails;
