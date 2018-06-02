@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Personal Center</title>
+</head>
+<body>
+  <h3>your address</h3>
+  <table>
+    <tr>
+        <td><b>street</b></td>
+        <td th:text="${address.street}">street</td>
+    </tr>
+    <tr>
+        <td><b>city</b></td>
+        <td th:text="${address.city}">city</td>
+    </tr>
+    <tr>
+        <td><b>province</b></td>
+        <td th:text="${address.province}">province</td>
+    </tr>
+    <tr>
+        <td><b>postal code</b></td>
+        <td th:text="${address.postalCode}">postalCode</td>
+    </tr>
+
+  </table>
+</body>
+</html>
