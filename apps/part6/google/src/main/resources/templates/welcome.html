@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Welcome</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h3>You are logged in</h3>
+		<p><b>sub: </b><span th:text="${user.sub}"></span></p>
+	<p><b>Name: </b><span th:text="${user.name}"></span></p>
+	<p><b>Profile: </b><a th:href="${user.profile}">Google Plus</a></p>
+	<p><b>Email: </b><span th:text="${user.email}"></span></p>
+	<p><b>Gender: </b><span th:text="${user.gender}"></span></p>
+	<p><b>Telephone: </b><span th:text="${user.telephone}"></span></p>
+	<p><b>Address: </b><span th:text="${user.address}"></span></p>
+	<p><b>Picture: </b> 
+		<img width="80" height="80" th:src="${user.picture}">
+	</p>
+	<a href="/">Index</a>
+	</div>
+</body>
+</html>
